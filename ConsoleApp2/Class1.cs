@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+Hotel hotel1 = new Hotel();
+hotel1.id = 1;
+hotel1.HotelName = "23 Hotel";
+hotel1.Address = "Baki şəhəri, Nizami rayonu";
+hotel1.RoomPrice = 70;
+hotel1.RoomCount = 2;
 
-namespace ConsoleApp2
+Console.WriteLine(hotel1.CalcRoomPrice());
+
+public class Hotel
 {
-    
-    public class Class1
-    {
-        public string ad;
-        public string soyad;
-        public int yas;
-        
-        public void fullname()
-        {
-            Console.WriteLine($"{ad} {soyad} registered");
+    public int id;
+    public int RoomCount;
+    public string HotelName;
+    public string Address;
+    public int RoomPrice;
 
-        }
-        public int age()
-        {
-            return yas;
-        }
+    public int CalcRoomPrice()
+    {
+        return RoomCount * RoomPrice;
     }
+
+
+
 }
